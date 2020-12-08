@@ -1,28 +1,44 @@
 #card4 {
-    height: 150px   ;
+    height: 112px ;
     display: inline-block;
-    margin-left: 1%;
-    margin-bottom: 0.5%;
-    width : 23.2%;
+    margin-left: 0.2%;
+margin-top:-0.8%;
+  max-height:112px ;
+  min-height: 112px;
+    width : 24.5%;
+    border-radius: 0%;
 }
-
-#card {
-    width: 23.2% ;
-    height: 150px;
+#card44 {
+    height: 112px ;
     display: inline-block;
-    margin-left: 1%;
-    margin-bottom: 0.5%;
+    margin-left: 0.4%;
+margin-top:-0.8%;
+  max-height:112px ;
+  min-height: 112px;
+    width : 24.5%;
+    border-radius: 0%;
+    font-weight: 300;
+}
+#card {
+    width: 24.5% ;
+    height: 112px;
+    display: inline-block;
+    margin-left: 0.2%;
+   // margin-bottom: 0.005%;
+   margin-top:-0.8%;
+   max-height:112px ;
+   min-height: 112px;
+    border-radius: 0%;
 }
 
 #rond {
-    background-color:#47ac53;
+    background-color:#7dd67d;
     border-radius:50%;
-    width: 7%;
+    width: 5%;
     height: 30%;
-    margin-top:-10%;
-    margin-left : -10%;
-    box-shadow: 5px 2px 8px #888888;
-    cursor:pointer;
+    margin-top:-12%;
+    margin-left : -16%;
+    
 }
 
 #rond2 {
@@ -36,16 +52,18 @@
     cursor:pointer;
 }
 .titrel {
-    margin-top:-6%;
-    margin-left : 45%;
-    color: #27293D;
-    font-size: 130%;
+   margin-top:-6%;
+    margin-left : 49%;
+  
+   
+    
 }
 
 .num {
     font-size : 500%;
     margin-left: 80%;
     color:grey;  
+    
 }
 
 ::ng-deep #pie {
@@ -57,12 +75,16 @@ margin-top : -7%;
 }
 
 #card3 {
-    height: 300px;
+    height: 239px;
+    max-height:239px ;
+    min-height: 239px;
     display: inline-block;
-    margin-left: 1%;
-    margin-bottom: 0.5%;
-    width: 96.1%;
+    margin-left: 0.4%;
+    width: 99.2%;
+
     cursor: pointer;
+    border-radius: 0%;
+    margin-top:-0.2%;
 }
 
 #card3title {
@@ -73,8 +95,8 @@ margin-top : -7%;
 }
 
 #card3:hover {
-    box-shadow:0px 0px 20px #db753d;
-    background-color:#f5eae6;
+    box-shadow:0px 0px 10px #82a5c9;
+    background-color:#e5e8ec;
 }
 
 ::ng-deep #chart {
@@ -87,25 +109,44 @@ margin-top : -7%;
 
   
 #card2 {
-    margin-left: 1%;
-    height: 400px;
+    margin-left: 0.2%;
+    height: 260px;
+    max-height:260px ;
+    min-height: 260px;
     display: inline-block;
-    width : 47.5%;
+    width : 49.45%;
     cursor: pointer;
+    border-radius: 0%;
+    margin-top:-0.2%;
+}
+#card22 {
+    margin-left: 0.4%;
+    height: 260px;
+    max-height:260px ;
+    min-height: 260px;
+    display: inline-block;
+    width : 49.45%;
+    cursor: pointer;
+    border-radius: 0%;
+    margin-top:-0.2%;
 }
 #titre {
     margin-left: 45%;
     font-size: 20px; 
-}
+}   
 
 
 
 #card2:hover{
-    box-shadow:0px 0px 20px #d18359;
-    background-color:#f5eae6;
+    box-shadow:0px 0px 10px #82a5c9;
+    background-color:#e5e8ec;
 }
     
-
+#card22:hover{
+    box-shadow:0px 0px 10px #82a5c9;
+    background-color:#e5e8ec;
+}
+    
 
 #titrel2{
 

@@ -43,7 +43,7 @@ export class SideNavOuterToolbarComponent implements OnInit {
     const isLarge = this.screen.sizes['screen-large'];
     this.menuMode = isLarge ? 'shrink' : 'overlap';
     this.menuRevealMode = isXSmall ? 'slide' : 'expand';
-    this.minMenuSize = isXSmall ? 0 : 60;
+    this.minMenuSize = isXSmall ? 0 : 40;
     this.shaderEnabled = !isLarge;
   }
 

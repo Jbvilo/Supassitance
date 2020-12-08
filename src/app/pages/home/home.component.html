@@ -1,19 +1,20 @@
 <!--VIGNETTES-->
-<div id="card4" class="dx-card responsive-paddings">
-    <div id="rond" (click)="currentstat('ok')"> </div>
-    <p class="titrel">Liens accessibles</p>
-    <span class="num"> 32</span>
+<div id="card44" class="dx-card responsive-paddings">
+       <div id="rond" (click)="currentstat('ok')"> </div>
+   
+       <p class="titrel">Liens accessibles</p>
+    <span class="num"> 32</span>-->
 </div>
 
 <div id="card4" class="dx-card responsive-paddings">
-    <div id="rond2"  (click)="currentstat('ko')"> </div>
+  <div id="rond2"  (click)="currentstat('ko')"> </div>
     <p class="titrel">Liens inaccessibles</p>
     <span class="num"> 54</span>
 </div>
 
 <div id="card4" class="dx-card responsive-paddings">
-    <p id="titrel2">Nombre de liens</p>
-    <span class="num"> 86</span>
+ <p id="titrel2">Nombre de liens</p>
+    <span class="num"> 86</span> 
 </div>
 
 <div id="card" class="dx-card responsive-paddings">
@@ -31,7 +32,7 @@
 
 <!--LINE-->
 <div id="card3" class="dx-card responsive-paddings" (dblclick)="naviguate('day')">
-    <dx-chart id="chart" [dataSource]="countriesInfo" >
+ <dx-chart id="chart" [dataSource]="countriesInfo" >
         <dxi-series *ngFor="let energy of energySources" [valueField]="energy.value" [name]="energy.name"></dxi-series>
         <dxo-common-series-settings argumentField="country" type="spline"  [color]="chartcolor">
             <dxo-point hoverMode="allArgumentPoints"></dxo-point>
@@ -55,10 +56,10 @@
 </div>
 
 
-<div id="card2" class="dx-card responsive-paddings" (dblclick)="naviguate('monthly')">
+<div id="card22" class="dx-card responsive-paddings" (dblclick)="naviguate('monthly')">
 
 
-    <dx-chart id="chart" [dataSource]="dataSource2">
+   <dx-chart id="chart" [dataSource]="dataSource2">
         <dxi-series argumentField="mois" valueField="taux" name="Taux de Liens Ok par mois" type="bar" [color]="chartcolor">
         </dxi-series>
     
@@ -77,7 +78,7 @@
             <dxo-grid [visible]="true"></dxo-grid>
         </dxi-value-axis>
 
-    </dx-chart>
+    </dx-chart>-->
 
 </div>
 
@@ -85,7 +86,7 @@
 
 
 <div id="card2" class="dx-card responsive-paddings" (dblclick)="naviguate('data')">
-    <dx-data-grid class="dx-datagrid" [dataSource]="customers" [columns]="['Liens', 'Metier', 'State', 'Phone', 'Fax']"
+ <dx-data-grid class="dx-datagrid" [dataSource]="customers" [columns]="['Liens', 'Metier', 'State', 'Phone', 'Fax']"
         [showBorders]="false"
         (onCellHoverChanged)="alert()"
         >

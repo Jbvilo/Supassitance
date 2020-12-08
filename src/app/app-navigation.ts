@@ -10,18 +10,13 @@ export const navigation = [
     icon: 'hierarchy'
   },
   {
-    text: 'Supervision par jour',
-    path: '/pages/weekly',
-    icon: 'chart'
-  },
-  {
-    text: 'Supervision par mois',
+    text: 'Supervision globale',
     path: '/pages/monthly',
     icon: 'chart'
   },
   {
     text: 'Base de données',
     path: '/pages/data',
-    icon: 'columnfield'
+    icon: 'floppy'
   }
 ];

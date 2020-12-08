@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   customers: Customer[];
   @ViewChild(DxDataGridComponent, { static: false }) grid: DxDataGridComponent;
   selectedRowIndex = -1;
-  chartcolor="red";
+  chartcolor="#47AC53";
   
 
   constructor(service: Service,private router:Router) {

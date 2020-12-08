@@ -1,63 +1,73 @@
-@import "../../../../themes/generated/variables.base.scss";
-@import "../../../../dx-styles.scss";
 
-:host {
-  flex: 0 0 auto;
+.header{
+  background-color: #edf2f7;
+font-weight: 300;
+font-size: 110%;
+
+}
+#currentitem{
+//color:#cda265;
+//font-weight: 400;
+}
+::ng-deep #saveButton  {
+ 
+ background-color: #edf2f7;
+ 
+}
+::ng-deep #saveButton .dx-icon {
+ 
+color:#4D7EB3;
+
+  
+ }
+ #title{
+  margin-left: 36%;
  
 
-  ::ng-deep .dx-toolbar .dx-toolbar-item.menu-button>.dx-toolbar-item-content .dx-icon {
-    color:#e0773e;
-  }
-}
+ }
+ #date{
+   margin-left:32%;
+ }
+/*
 
-::ng-deep .dx-toolbar.header-toolbar .dx-toolbar-items-container .dx-toolbar-after {
-  padding: 0 40px;
 
-  :host-context(.screen-x-small) & {
-    padding: 0 20px;
-  }
-}
-
-::ng-deep .dx-toolbar .dx-toolbar-item.menu-button {
-  width: $side-panel-min-width;
-  text-align: center;
-  padding: 0;
-}
 
 ::ng-deep .header-title .dx-item-content {
-  padding: 0;
-  margin: 0;
-  color:white;
-font-size: 120%;
+ // padding: 0;
+  //margin: 0;
+  color:black;
+//font-size: 50%;
+text-align: center;
 }
-#imgsupa{
-  height:220px;
-}
-::ng-deep .header-title2  {
-  padding: 0;
-  margin: 0;
-  color:white;
+
+::ng-deep .header-title2 .dx-item-content {
+ // padding: 0;
+  //margin: 0;
+  color:black;
+  font-size: 10px;
+  text-align: center;
 
 }
 :host-context(.dx-theme-generic) {
   .dx-toolbar {
-    padding: 10px 0;
+  //padding: 10px 0;
   }
 
   .user-button>.dx-button-content {
-    padding: 3px;
+   // padding: 3px;
   }
 }
 #titre{
-  color:white;
-  font-size: 160%;
+  color:black;
+  font-size: 50%;
   font-weight:500;
  
  
 }
 .header-toolbar{
-  background-color:#1E1E2E ;
-}
+  background-color:#edf2f7 ;
+  height: 40px;
+  }
 
 .menu-button{
 
@@ -78,3 +88,4 @@ font-size: 120%;
 
 
 
+*/

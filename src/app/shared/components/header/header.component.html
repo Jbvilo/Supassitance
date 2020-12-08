@@ -1,71 +1,15 @@
-<header>
-
-  <dx-toolbar class="header-toolbar">
-
-    <dxi-item
-      *ngIf="menuToggleEnabled"
-      location="before"
-      widget="dxButton"
-      cssClass="menu-button"
-      [options]="{
-        icon: 'menu',
-        stylingMode: 'text',
-        onClick: toggleMenu
-      }">
-    </dxi-item>
-
-    <dxi-item
-      location="before"
-      cssClass="header-title2"
-      *ngIf="currentItem"
-      [text]="currentItem">
-    </dxi-item>
-
-
-    <dxi-item
-      location="center"
-      cssClass="header-title"
-      *ngIf="title"
-      [text]="title"
-      >
-      
-    </dxi-item>
-
-
-    
-
-
-<dxi-item
-location="after"
-(click)="isPopupVisible = true" >
- <p id="titre">24 Septembre 2020</p><!--{{hour}}-->
-</dxi-item>
-
-
- 
-  </dx-toolbar>
-
-
-
-
-
+<header class="header">
+    <dx-button *ngIf="menuToggleEnabled" icon="menu" id="saveButton" (click)="toggleMenu()"></dx-button>
+  <!--&nbsp;<span *ngIf="currentItem" id="currentitem">{{currentItem}}</span>
+<span *ngIf="title" id="title">{{title}}</span>
+  <span *ngIf="hour" id="date" (click)="isPopupVisible = true">24 Septembre 2020</span>-->
+  
 </header>
 
 <!--POP-UP CALENDRIER-->
-<dx-popup
-id="popup"
-title="Calendrier"
-[(visible)]="isPopupVisible"
-[width]="300"
-[height]="250"
-[dragEnabled]="false"
-[closeOnOutsideClick]="true"
->
-<dxo-position
-my="top right"
-at="bottom right"
-of="#titre">
-</dxo-position>
+<dx-popup id="popup" title="Calendrier" [(visible)]="isPopupVisible" [width]="300" [height]="250" [dragEnabled]="false"
+  [closeOnOutsideClick]="true">
+  <dxo-position my="top right" at="bottom right" of="#titre">
+  </dxo-position>
 
 </dx-popup>
-

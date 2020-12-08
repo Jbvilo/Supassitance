@@ -1,22 +1,24 @@
 :host {
   flex-direction: column;
   display: flex;
-  height: 98%;
+  height: 100%;
   width: 100%;
-  border-radius: 2px;
+
  
 }
 
 .layout-header {
   z-index: 1501;
-  background-color:black;
+
+  
 }
 
 .layout-body {
   flex: 1;
   min-height: 0;
- margin-left:1%;
- border-radius: 5px;
+ margin-left:0%;
+ border-radius: 0px;
+ background-color:#edf2f7;
 
 }
 
@@ -26,8 +28,8 @@
 
 }
 .dx-swatch-additional {
-  border-radius: 5px;
-  background-image: linear-gradient(#e0773e,#EA5B0F);
-
- 
-}
+  border-radius: 0px;
+  background-color:  #4d7eb3 ;
+//  background-image: linear-gradient(#263f59, #c9d8e8);
+box-shadow: 5px 0px 2px black;
+ }

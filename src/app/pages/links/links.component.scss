@@ -1,0 +1,65 @@
+#rsquare{
+    width: 200px;
+    height: 8px;
+    background : rgb(211, 64, 64) ;
+    display: inline-block;
+  }
+  #gsquare{
+    width: 200px;
+    height: 8px;
+    background : rgb(50, 194, 86) ;
+    display: inline-block;
+  }
+  #textbox{
+    width: 200px;
+    height: 35px;
+    margin-left: 87%;
+    margin-top : -3%;
+  }
+  #background{
+
+    height:800px;
+    margin-left: 1% ;
+    width: 96.1%;
+
+  }
+#carousel{
+margin-top:-3%;
+display:flex;
+justify-content: center;
+}
+#creneau{
+  display:flex;
+  justify-content: center;
+  font-size: 200%;
+  color:#1E1E2E;
+  
+
+}
+#conteneur{
+
+  margin-left: 2%;
+}
+.divi{
+
+  display:inline-block;
+  margin-left:2%;
+  color:black;
+}
+h5{
+  color:white;
+  
+  
+    }
+
+
+    ::ng-deep #gridContainer2{
+      height: 740px;
+  }
+
+  ::ng-deep #nextbutton .dx-icon {
+
+    color: #E37132;
+  }
+
+ 

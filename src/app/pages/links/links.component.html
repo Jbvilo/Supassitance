@@ -1,0 +1,75 @@
+<div id="background" class="dx-card responsive-paddings">
+
+  <!--
+  <dx-button
+  id="prevbutton" 
+  icon="chevronprev"
+ >
+</dx-button>
+<dx-button
+id="nextbutton" 
+icon="chevronright"
+
+>
+</dx-button>-->
+
+
+
+
+<div id="carousel"> 
+<carousel [cellWidth]="1500"  [height]="900" [width]="1500" [arrowsOutside]="true" [loop]="true" [transitionDuration]="100" [autoplay]="false" [autoplayInterval]="5000" [arrowsTheme]="light"  #myCarousel="carousel">
+  <!--<div class="carousel-cell" >
+  <br>
+    <dx-data-grid
+    id="gridContainer2"
+    [dataSource]="links"
+    [columnMinWidth]="30"
+    [showBorders]="true"
+    [remoteOperations]="true">
+
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+    <dxo-scrolling mode="virtual" rowRenderingMode="virtual" ></dxo-scrolling>
+    </dx-data-grid>
+  
+  </div>-->
+  <div class="carousel-cell" *ngFor="let item of value; index as i" >
+    <span id="creneau">{{i}}:00 à {{i+1}}:00</span>
+    <dx-data-grid
+    [rowAlternationEnabled]="false"
+    [dataSource]="links"
+    id="gridContainer2"
+    [columnMinWidth]="30"
+    [showBorders]="true"
+    [remoteOperations]="true">
+  
+    <dxi-column dataField="ID"   ></dxi-column>
+    <dxi-column dataField="Nom"  ></dxi-column>
+    <dxi-column dataField="00"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="05"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="10"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="15"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="20"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="25"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="30"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="35"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="40"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="45"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="50"  cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column dataField="55" cellTemplate="cellTemplate"></dxi-column>
+
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+    <dxo-scrolling mode="virtual" rowRenderingMode="virtual" ></dxo-scrolling>
+   <div *dxTemplate="let data of 'cellTemplate'">
+      <img [src]="data.value" style="width:20px"/>
+  </div>
+    </dx-data-grid>
+  
+
+  </div>
+
+    </carousel>
+</div>
+
+</div>
+
+

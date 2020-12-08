@@ -1,0 +1,22 @@
+<div id="background" class="dx-card responsive-paddings">
+
+
+    <div id="textbox"> <dx-text-box width="200" placeholder="Search"></dx-text-box> </div>
+<dx-chart
+    id="chart"
+    [dataSource]="dataSource">
+    <dxi-series
+        argumentField="mois"
+        valueField="taux"
+        name="Taux de Liens Ok par mois"
+        type="bar"
+        color="#47ac53">
+    </dxi-series>
+  
+    <dxo-tooltip [enabled]="true"></dxo-tooltip>
+
+    
+    <dxo-legend verticalAlignment="top" horizontalAlignment="center" itemTextPosition="right" ></dxo-legend>
+
+</dx-chart>
+</div>

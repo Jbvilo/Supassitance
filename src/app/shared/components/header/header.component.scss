@@ -1,0 +1,80 @@
+@import "../../../../themes/generated/variables.base.scss";
+@import "../../../../dx-styles.scss";
+
+:host {
+  flex: 0 0 auto;
+ 
+
+  ::ng-deep .dx-toolbar .dx-toolbar-item.menu-button>.dx-toolbar-item-content .dx-icon {
+    color:#e0773e;
+  }
+}
+
+::ng-deep .dx-toolbar.header-toolbar .dx-toolbar-items-container .dx-toolbar-after {
+  padding: 0 40px;
+
+  :host-context(.screen-x-small) & {
+    padding: 0 20px;
+  }
+}
+
+::ng-deep .dx-toolbar .dx-toolbar-item.menu-button {
+  width: $side-panel-min-width;
+  text-align: center;
+  padding: 0;
+}
+
+::ng-deep .header-title .dx-item-content {
+  padding: 0;
+  margin: 0;
+  color:white;
+font-size: 120%;
+}
+#imgsupa{
+  height:220px;
+}
+::ng-deep .header-title2  {
+  padding: 0;
+  margin: 0;
+  color:white;
+
+}
+:host-context(.dx-theme-generic) {
+  .dx-toolbar {
+    padding: 10px 0;
+  }
+
+  .user-button>.dx-button-content {
+    padding: 3px;
+  }
+}
+#titre{
+  color:white;
+  font-size: 160%;
+  font-weight:500;
+ 
+ 
+}
+.header-toolbar{
+  background-color:#1E1E2E ;
+}
+
+.menu-button{
+
+  margin-left:10px;
+  color: #e0773e;
+}
+
+::ng-deep .ddd .dx-item-content{
+
+  color:white;
+  margin-left: 100%
+}
+#popup{
+
+  margin-left:40%;
+
+}
+
+
+

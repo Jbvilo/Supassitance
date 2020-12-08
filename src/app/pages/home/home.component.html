@@ -1,0 +1,111 @@
+<!--VIGNETTES-->
+<div id="card4" class="dx-card responsive-paddings">
+    <div id="rond" (click)="currentstat('ok')"> </div>
+    <p class="titrel">Liens accessibles</p>
+    <span class="num"> 32</span>
+</div>
+
+<div id="card4" class="dx-card responsive-paddings">
+    <div id="rond2"  (click)="currentstat('ko')"> </div>
+    <p class="titrel">Liens inaccessibles</p>
+    <span class="num"> 54</span>
+</div>
+
+<div id="card4" class="dx-card responsive-paddings">
+    <p id="titrel2">Nombre de liens</p>
+    <span class="num"> 86</span>
+</div>
+
+<div id="card" class="dx-card responsive-paddings">
+    <dx-pie-chart id="pie" type="doughnut" title="" palette="Carmine" [dataSource]="populationByRegions">
+        <dxi-series argumentField="region">
+            <dxo-label [visible]="false" format="">
+                <dxo-connector [visible]="false"></dxo-connector>
+            </dxo-label>
+        </dxi-series>
+        <dxo-legend [margin]="" horizontalAlignment="" verticalAlignment="" [visible]="true"></dxo-legend>
+        <dxo-tooltip [enabled]="false" [customizeTooltip]="customizeTooltip" format=""></dxo-tooltip>
+    </dx-pie-chart>
+</div>
+
+
+<!--LINE-->
+<div id="card3" class="dx-card responsive-paddings" (dblclick)="naviguate('day')">
+    <dx-chart id="chart" [dataSource]="countriesInfo" >
+        <dxi-series *ngFor="let energy of energySources" [valueField]="energy.value" [name]="energy.name"></dxi-series>
+        <dxo-common-series-settings argumentField="country" type="spline"  [color]="chartcolor">
+            <dxo-point hoverMode="allArgumentPoints"></dxo-point>
+        </dxo-common-series-settings>
+        <dxo-argument-axis [valueMarginsEnabled]="false" discreteAxisDivisionMode="crossLabels" color="">
+            <dxo-grid [visible]="true"></dxo-grid>
+        </dxo-argument-axis>
+        <dxi-value-axis color="">
+            <dxo-grid [visible]="false"></dxo-grid>
+        </dxi-value-axis>
+        <dxo-crosshair [enabled]="false" [width]="0.5" dashStyle="line">
+            <dxo-label [visible]="true" backgroundColor="#949494">
+                <dxo-font color="#fff" [size]="12">
+                </dxo-font>
+            </dxo-label>
+        </dxo-crosshair>
+        <dxo-legend verticalAlignment="top" horizontalAlignment="center" itemTextPosition="right" [visible]="false">
+        </dxo-legend>
+        <dxo-tooltip [enabled]="true"></dxo-tooltip>
+    </dx-chart>
+</div>
+
+
+<div id="card2" class="dx-card responsive-paddings" (dblclick)="naviguate('monthly')">
+
+
+    <dx-chart id="chart" [dataSource]="dataSource2">
+        <dxi-series argumentField="mois" valueField="taux" name="Taux de Liens Ok par mois" type="bar" [color]="chartcolor">
+        </dxi-series>
+    
+     
+        <dxo-tooltip [enabled]="true"></dxo-tooltip>
+
+
+        <dxo-legend verticalAlignment="top" horizontalAlignment="center" itemTextPosition="right" [visible]="false">
+        </dxo-legend>
+
+        <dxo-argument-axis [valueMarginsEnabled]="false" discreteAxisDivisionMode="crossLabels" color="white">
+            <dxo-grid [visible]="false"></dxo-grid>
+        </dxo-argument-axis>
+
+        <dxi-value-axis color="white">
+            <dxo-grid [visible]="true"></dxo-grid>
+        </dxi-value-axis>
+
+    </dx-chart>
+
+</div>
+
+
+
+
+<div id="card2" class="dx-card responsive-paddings" (dblclick)="naviguate('data')">
+    <dx-data-grid class="dx-datagrid" [dataSource]="customers" [columns]="['Liens', 'Metier', 'State', 'Phone', 'Fax']"
+        [showBorders]="false"
+        (onCellHoverChanged)="alert()"
+        >
+
+        <dxo-filter-row [visible]="false"></dxo-filter-row>
+        <dxo-search-panel [visible]="false"></dxo-search-panel>
+        <dxo-paging [pageSize]="5" [pageIndex]="1">
+        </dxo-paging>
+
+        <dxi-column dataField="CompanyName" [filterOperations]="['contains', '=']" (allowEditing)="true">
+        </dxi-column>
+        <dxi-column dataField="City" [filterOperations]="['contains', '=']">
+        </dxi-column>
+
+        <dxi-column dataField="State" [filterOperations]="['contains', '=']">
+        </dxi-column>
+
+        <dxi-column dataField="Phone" [filterOperations]="['contains', '=']">
+        </dxi-column>
+        <dxi-column dataField="Fax" [filterOperations]="['contains', '=']">
+        </dxi-column>
+    </dx-data-grid>
+</div>

@@ -1,0 +1,89 @@
+<div id="background" class="dx-card responsive-paddings">
+    <dx-data-grid id="gridContainer" [dataSource]="customers" [showBorders]="true" [rowAlternationEnabled]="true" >
+        <dxo-filter-row [visible]="false"></dxo-filter-row>
+        <dxo-search-panel [visible]="true"></dxo-search-panel>
+        <dxo-editing  mode="cell" [allowUpdating]="true"  ></dxo-editing>
+        <dxo-paging [pageSize]="10" [pageIndex]="1"></dxo-paging>
+       <dxo-selection mode="multiple" selectAllMode="page"></dxo-selection>
+
+            <dxi-column dataField="CompanyName" [filterOperations]="['contains', '=']" >
+            </dxi-column>
+            <dxi-column dataField="City" [filterOperations]="['contains', '=']"></dxi-column>
+            <dxi-column dataField="State" [filterOperations]="['contains', '=']"></dxi-column>
+            <dxi-column dataField="Phone" [filterOperations]="['contains', '=']"></dxi-column>
+            <dxi-column dataField="Fax" [filterOperations]="['contains', '=']"  [allowEditing]="editing()"></dxi-column>
+    </dx-data-grid>
+
+    <dx-button 
+    stylingMode="contained" 
+    text="Ajouter" 
+    type="default"
+    [width]="120" 
+    style="background-color: green;"
+    (click)="isPopupVisible = true">
+    </dx-button>
+    &nbsp;
+    <dx-button 
+    stylingMode="contained" 
+    text="Supprimer"
+    type="default" 
+    [width]="120">
+    </dx-button>
+</div>
+
+<!--POP-UP AJOUT D'UN LIEN-->
+<dx-popup 
+id="popup" 
+title="Ajouter un lien"
+[(visible)]="isPopupVisible" 
+[width]="800" 
+[height]="400"
+[dragEnabled]="false" 
+[closeOnOutsideClick]="true">
+
+    <div class="form">
+        <div class="dx-fieldset">
+            <div class="dx-field">
+                <div class="dx-field-label">Nom :</div>
+                <div class="dx-field-value">
+                    <dx-text-box value=""></dx-text-box>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <div class="dx-fieldset">
+            <div class="dx-field">
+                <div class="dx-field-label">Url :</div>
+                <div class="dx-field-value">
+                    <dx-text-box value=""></dx-text-box>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <div class="dx-fieldset">
+            <div class="dx-field">
+                <div class="dx-field-label">Metier :</div>
+                <div class="dx-field-value">
+                    <dx-text-box value=""></dx-text-box>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <dx-button 
+    stylingMode="contained" 
+    text="Ajouter" 
+    type="default" 
+    [width]="120"
+    style="background-color: green;"
+    (click)="isPopupVisible = true"
+    id="ajouter">
+    </dx-button>
+
+</dx-popup>
